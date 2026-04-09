@@ -111,6 +111,17 @@ See [Python/README.md](Python/README.md) for detailed Python setup instructions,
 - Running the MCP server
 - Using direct or server-based connections
 
+### Cross-host install via agent-add
+
+Install to any supported AI host (Claude Code, Cursor, Windsurf, and [15+ more](https://github.com/pea3nut/agent-get)) with one command:
+
+```bash
+npx -y agent-add --mcp '{"unrealMCP":{"command":"uv","args":["--directory","<path/to/unreal-mcp/Python>","run","unreal_mcp_server.py"]}}'
+```
+
+> Requires [Node.js](https://nodejs.org/) 18+. Replace `<path/to/unreal-mcp/Python>` with the absolute path to this repository's `Python` directory. `agent-add` auto-detects your AI host and writes the config to the correct location.
+
+
 ### Configuring your MCP Client
 
 Use the following JSON for your mcp configuration based on your MCP client.
