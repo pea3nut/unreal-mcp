@@ -12,7 +12,7 @@
 
 This project enables AI assistant clients like Cursor, Windsurf and Claude Desktop to control Unreal Engine through natural language using the Model Context Protocol (MCP).
 
-## ⚠️ Experimental Status
+## â ï¸ Experimental Status
 
 This project is currently in an **EXPERIMENTAL** state. The API, functionality, and implementation details are subject to significant changes. While we encourage testing and feedback, please be aware that:
 
@@ -21,20 +21,20 @@ This project is currently in an **EXPERIMENTAL** state. The API, functionality, 
 - Documentation may be outdated or missing
 - Production use is not recommended at this time
 
-## 🌟 Overview
+## ð Overview
 
 The Unreal MCP integration provides comprehensive tools for controlling Unreal Engine through natural language:
 
 | Category | Capabilities |
 |----------|-------------|
-| **Actor Management** | • Create and delete actors (cubes, spheres, lights, cameras, etc.)<br>• Set actor transforms (position, rotation, scale)<br>• Query actor properties and find actors by name<br>• List all actors in the current level |
-| **Blueprint Development** | • Create new Blueprint classes with custom components<br>• Add and configure components (mesh, camera, light, etc.)<br>• Set component properties and physics settings<br>• Compile Blueprints and spawn Blueprint actors<br>• Create input mappings for player controls |
-| **Blueprint Node Graph** | • Add event nodes (BeginPlay, Tick, etc.)<br>• Create function call nodes and connect them<br>• Add variables with custom types and default values<br>• Create component and self references<br>• Find and manage nodes in the graph |
-| **Editor Control** | • Focus viewport on specific actors or locations<br>• Control viewport camera orientation and distance |
+| **Actor Management** | â¢ Create and delete actors (cubes, spheres, lights, cameras, etc.)<br>â¢ Set actor transforms (position, rotation, scale)<br>â¢ Query actor properties and find actors by name<br>â¢ List all actors in the current level |
+| **Blueprint Development** | â¢ Create new Blueprint classes with custom components<br>â¢ Add and configure components (mesh, camera, light, etc.)<br>â¢ Set component properties and physics settings<br>â¢ Compile Blueprints and spawn Blueprint actors<br>â¢ Create input mappings for player controls |
+| **Blueprint Node Graph** | â¢ Add event nodes (BeginPlay, Tick, etc.)<br>â¢ Create function call nodes and connect them<br>â¢ Add variables with custom types and default values<br>â¢ Create component and self references<br>â¢ Find and manage nodes in the graph |
+| **Editor Control** | â¢ Focus viewport on specific actors or locations<br>â¢ Control viewport camera orientation and distance |
 
 All these capabilities are accessible through natural language commands via AI assistants, making it easy to automate and control Unreal Engine workflows.
 
-## 🧩 Components
+## ð§© Components
 
 ### Sample Project (MCPGameProject) `MCPGameProject`
 - Based off the Blank Project, but with the UnrealMCP plugin added.
@@ -53,7 +53,7 @@ All these capabilities are accessible through natural language commands via AI a
 - Loads and registers tool modules from the `tools` directory
 - Uses the FastMCP library to implement the Model Context Protocol
 
-## 📂 Directory Structure
+## ð Directory Structure
 
 - **MCPGameProject/** - Example Unreal project
   - **Plugins/UnrealMCP/** - C++ plugin source
@@ -67,7 +67,7 @@ All these capabilities are accessible through natural language commands via AI a
 - **Docs/** - Comprehensive documentation
   - See [Docs/README.md](Docs/README.md) for documentation index
 
-## 🚀 Quick Start Guide
+## ð Quick Start Guide
 
 ### Prerequisites
 - Unreal Engine 5.5+
@@ -110,6 +110,16 @@ See [Python/README.md](Python/README.md) for detailed Python setup instructions,
 - Setting up your Python environment
 - Running the MCP server
 - Using direct or server-based connections
+
+### Quick Setup via agent-add
+
+Auto-configure any supported MCP client (Claude Desktop, Cursor, Windsurf, and [15+ more](https://github.com/pea3nut/agent-get)) with one command:
+
+```bash
+npx -y agent-add --mcp '{"unrealMCP":{"command":"uv","args":["--directory","/path/to/unreal-mcp/Python","run","unreal_mcp_server.py"]}}'
+```
+
+> Replace `/path/to/unreal-mcp/Python` with your actual path. Requires [Node.js](https://nodejs.org/) 18+ and [uv](https://docs.astral.sh/uv/). `agent-add` auto-detects your MCP client and writes the correct config file.
 
 ### Configuring your MCP Client
 
