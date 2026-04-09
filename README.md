@@ -111,17 +111,6 @@ See [Python/README.md](Python/README.md) for detailed Python setup instructions,
 - Running the MCP server
 - Using direct or server-based connections
 
-### Cross-host install via agent-add
-
-Install to any supported AI host (Claude Code, Cursor, Windsurf, and [15+ more](https://github.com/pea3nut/agent-get)) with one command:
-
-```bash
-npx -y agent-add --mcp '{"unrealMCP":{"command":"uv","args":["--directory","<path/to/unreal-mcp/Python>","run","unreal_mcp_server.py"]}}'
-```
-
-> Requires [Node.js](https://nodejs.org/) 18+. Replace `<path/to/unreal-mcp/Python>` with the absolute path to this repository's `Python` directory. `agent-add` auto-detects your AI host and writes the config to the correct location.
-
-
 ### Configuring your MCP Client
 
 Use the following JSON for your mcp configuration based on your MCP client.
@@ -157,6 +146,14 @@ Depending on which MCP client you're using, the configuration file location will
 Each client uses the same JSON format as shown in the example above. 
 Simply place the configuration in the appropriate location for your MCP client.
 
+
+Or use [agent-add](https://github.com/pea3nut/agent-get) to auto-configure any of the above clients (and [15+ more](https://github.com/pea3nut/agent-get)):
+
+```bash
+npx -y agent-add --mcp '{"unrealMCP":{"command":"uv","args":["--directory","<path/to/unreal-mcp/Python>","run","unreal_mcp_server.py"]}}'
+```
+
+Replace `<path/to/unreal-mcp/Python>` with the absolute path to this repository's `Python` directory.
 
 ## License
 MIT
