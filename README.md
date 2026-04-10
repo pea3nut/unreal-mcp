@@ -133,27 +133,14 @@ Use the following JSON for your mcp configuration based on your MCP client.
 
 An example is found in `mcp.json`
 
-### MCP Configuration Locations
-
-Depending on which MCP client you're using, the configuration file location will differ:
-
-| MCP Client | Configuration File Location | Notes |
-|------------|------------------------------|-------|
-| Claude Desktop | `~/.config/claude-desktop/mcp.json` | On Windows: `%USERPROFILE%\.config\claude-desktop\mcp.json` |
-| Cursor | `.cursor/mcp.json` | Located in your project root directory |
-| Windsurf | `~/.config/windsurf/mcp.json` | On Windows: `%USERPROFILE%\.config\windsurf\mcp.json` |
-
-Each client uses the same JSON format as shown in the example above. 
-Simply place the configuration in the appropriate location for your MCP client.
-
-
-Or use [agent-add](https://github.com/pea3nut/agent-get) to auto-configure any of the above clients (and [15+ more](https://github.com/pea3nut/agent-get)):
+Instead of manually placing this JSON, you can use [agent-add](https://github.com/pea3nut/agent-get) to auto-configure any supported MCP client (Cursor, Claude Desktop, Windsurf, and [15+ more](https://github.com/pea3nut/agent-get)):
 
 ```bash
 npx -y agent-add --mcp '{"unrealMCP":{"command":"uv","args":["--directory","<path/to/unreal-mcp/Python>","run","unreal_mcp_server.py"]}}'
 ```
 
-Replace `<path/to/unreal-mcp/Python>` with the absolute path to this repository's `Python` directory.
+> Requires [Node.js](https://nodejs.org/) 18+. Replace `<path/to/unreal-mcp/Python>` with the absolute path to this repository's `Python` directory.
+
 
 ## License
 MIT
