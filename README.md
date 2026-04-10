@@ -133,7 +133,7 @@ Use the following JSON for your mcp configuration based on your MCP client.
 
 An example is found in `mcp.json`
 
-Instead of manually placing this JSON, you can use [agent-add](https://github.com/pea3nut/agent-get) to auto-configure any supported MCP client (Cursor, Claude Desktop, Windsurf, and [15+ more](https://github.com/pea3nut/agent-get)):
+Instead of manually placing this JSON, you can use [agent-add](https://github.com/pea3nut/agent-add) to auto-configure any supported MCP client (Cursor, Claude Desktop, Windsurf, and [15+ more](https://github.com/pea3nut/agent-add)):
 
 ```bash
 npx -y agent-add --mcp '{"unrealMCP":{"command":"uv","args":["--directory","<path/to/unreal-mcp/Python>","run","unreal_mcp_server.py"]}}'
